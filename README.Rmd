@@ -1,0 +1,34 @@
+---
+title: "README"
+author: "JM"
+date: "25/02/2022"
+output: html_document
+---
+<h4>**Read Me**<h4>
+The repository contains three files excluding the ReadMe. These are:<br><br>
+- The tidy data set(TidyUCIHCAR.txt)<br>
+- The script(run_analysis.R)<br>
+- The codebook(CodeBook.md)<br><br>
+
+<h4>**Data Set Background**<h4>
+The data set was created using the UCI HCAR data which can be found at:<br> https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip<br><br>
+
+The run_analysis.R script was run to turn this into a tidy data set which gives the average of each variable for each activity and each subject for measures that use the mean or standard deviation. <br><br>
+The script itself is structured into 6 sections. The bullets below list what is done at each step to generate the tidy data:<br><br>
+- **Section 0**: This section loads any required R packages, downloads the data and reads in the files initially required for the script<br><br>
+- **Section 1**: Merges the training and the test sets to create one data set. Due to the matching dimensions, this is achieved by binding the columns between the 'x' and 'y' files for the training and test datasets and then binding the resulting two dataframes together. The 'master' data set generated here should give one dataframe that includes subject IDs, all measurements and activity IDs for both the training and test groups.<br><br>
+- **Section 2**: Extracts only the measurements on the mean and standard deviation for each measurement.This is done by reading in the variable names in the features file, searching for matching text and discarding variables that do not match. Note this does not include the mean frequency (meanFreq()) which is considered a separate measure for the purpose of this exercise.<br><br>
+- **Section 3**: Descriptive activity names are given to name the activities in the data set(variable V1.1 as this is prior to variable naming which occurs in the subsequent step). These activity names are taken from the activity_labels.txt file and underscores are removed for clarity.<br><br>
+- **Section 4**: Data set is appropriately labelled with descriptive variable names. These are taken from the original features list and cleaned up to help descriptiveness and clarity. f and t are replaced with more meaningful descriptors (FourierTrans and Time), superfluous brackets are removed from names and variables are re-formatted to ensure each word is capitalised in the variable name to help with readability.Dashes remain to clearly denote measure type, measure calculation and the dimension being referred to where applicable. <br><br>
+- **Section 5**: Independent tidy data set with the average of each variable for each activity and each subject is created. Data set is grouped by activity and subject id and then manipulated to move the measures/features to one variable and have all the values stored in another variable to make sure the dataset is tidy.The script then writes this tidy data as a txt file. Each row represents one observation which is defined as a combination of subject,activity,measure and value.NB there are multiple ways of ensuring the resulting data is tidy and this is only one way.<br><br>   
+
+<h4>**CodeBook**<h4>
+The codebook lists the variables in the data set, their descriptions and their ranges of possible values.
+
+
+
+
+
+
+
+

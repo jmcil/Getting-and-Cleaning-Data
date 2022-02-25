@@ -1,0 +1,109 @@
+---
+title: "Tidy UCI HCAR Data CodeBook"
+author: "JM"
+date: "25/02/2022"
+output: html_document
+---
+<h4>**SubjectID** <h4>    
+_Character length:2_ <br><br>
+Integer denoting Unique identifier assigned to each participant <br>           
+1..30  <br>
+
+<h4>**ActivityName**<h4>    
+_Max character length:18_<br><br>
+String denoting one of the 6 types of activity performed in the experiment<br><br>
+        LAYING<br>
+        SITTING<br>
+        STANDING<br>
+        WALKING<br>
+        WALKING DOWNSTAIRS<br>
+        WALKING UPSTAIRS<br>
+
+<h4>**Measure**<h4>   
+_Max character length:36_<br><br>
+  String denoting one of the 6 types of activity performed in the experiment. The first
+  part of the string should be either "FourierTrans" or "Time", this tells us whether the
+  measurement relates to the time domain or is a Fourier Transform.<br>
+  The second part of the string tells us what is being measured e.g. BodyAcc is body acceleration.<br>
+  The third part of the string which appears after the first dash tells us whether the measurement
+  pertains to a mean or stdnard deviation.<br>
+  The fourth part of the string relates to the direction and should be X,Y or Z. The unique strings
+  recorded are listed below:<br>
+  
+  TimeBodyAcc-Mean-X<br>
+  TimeBodyAcc-Mean-Y<br>
+  TimeBodyAcc-Mean-Z<br>
+  TimeGravityAcc-Mean-X<br>
+  TimeGravityAcc-Mean-Y<br>
+  TimeGravityAcc-Mean-Z<br>
+  TimeBodyAccJerk-Mean-X<br>
+  TimeBodyAccJerk-Mean-Y<br>
+  TimeBodyAccJerk-Mean-Z<br>
+  TimeBodyGyro-Mean-X<br>
+  TimeBodyGyro-Mean-Y<br>
+  TimeBodyGyro-Mean-Z<br>
+  TimeBodyGyroJerk-Mean-X<br>
+  TimeBodyGyroJerk-Mean-Y<br>
+  TimeBodyGyroJerk-Mean-Z<br>
+  TimeBodyAccMag-Mean<br>
+  TimeGravityAccMag-Mean<br>
+  TimeBodyAccJerkMag-Mean<br>
+  TimeBodyGyroMag-Mean<br>
+  TimeBodyGyroJerkMag-Mean<br>
+  FourierTransBodyAcc-Mean-X<br>
+  FourierTransBodyAcc-Mean-Y<br>
+  FourierTransBodyAcc-Mean-Z<br>
+  FourierTransBodyAccJerk-Mean-X<br>
+  FourierTransBodyAccJerk-Mean-Y<br>
+  FourierTransBodyAccJerk-Mean-Z<br>
+  FourierTransBodyGyro-Mean-X<br>
+  FourierTransBodyGyro-Mean-Y<br>
+  FourierTransBodyGyro-Mean-Z<br>
+  FourierTransBodyAccMag-Mean<br>
+  FourierTransBodyBodyAccJerkMag-Mean<br>
+  FourierTransBodyBodyGyroMag-Mean<br>
+  FourierTransBodyBodyGyroJerkMag-Mean<br>
+  TimeBodyAcc-StD-X<br>
+  TimeBodyAcc-StD-Y<br>
+  TimeBodyAcc-StD-Z<br>
+  TimeGravityAcc-StD-X<br>
+  TimeGravityAcc-StD-Y<br>
+  TimeGravityAcc-StD-Z<br>
+  TimeBodyAccJerk-StD-X<br>
+  TimeBodyAccJerk-StD-Y<br>
+  TimeBodyAccJerk-StD-Z<br>
+  TimeBodyGyro-StD-X<br>
+  TimeBodyGyro-StD-Y<br>
+  TimeBodyGyro-StD-Z<br>
+  TimeBodyGyroJerk-StD-X<br>
+  TimeBodyGyroJerk-StD-Y<br>
+  TimeBodyGyroJerk-StD-Z<br>
+  TimeBodyAccMag-StD<br>
+  TimeGravityAccMag-StD<br>
+  TimeBodyAccJerkMag-StD<br>
+  TimeBodyGyroMag-StD<br>
+  TimeBodyGyroJerkMag-StD<br>
+  FourierTransBodyAcc-StD-X<br>
+  FourierTransBodyAcc-StD-Y<br>
+  FourierTransBodyAcc-StD-Z<br>
+  FourierTransBodyAccJerk-StD-X<br>
+  FourierTransBodyAccJerk-StD-Y<br>
+  FourierTransBodyAccJerk-StD-Z<br>
+  FourierTransBodyGyro-StD-X<br>
+  FourierTransBodyGyro-StD-Y<br>
+  FourierTransBodyGyro-StD-Z<br>
+  FourierTransBodyAccMag-StD<br>
+  FourierTransBodyBodyAccJerkMag-StD<br>
+  FourierTransBodyBodyGyroMag-StD<br>
+  FourierTransBodyBodyGyroJerkMag-StD<br>
+
+ <h4>**Value**<h4>   
+ _Max character length:21_<br><br>
+  Numeric value of the measurement recorded up to 21 characters between -1 and 1<br>
+  -1..1
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
