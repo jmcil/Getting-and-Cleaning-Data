@@ -56,7 +56,7 @@ names(mastermeanstd)<-col_name[,2]
 mastercolmeans<-mastermeanstd%>%group_by(SubjectID,ActivityName)%>%summarise_all(mean)
 TidyUCIHCAR<-mastercolmeans%>%pivot_longer(-(SubjectID:ActivityName),"Measure",values_to = "Value")
 
-write.table(TidyUCIHCAR,file="TidyUCIHCAR.txt")
+write.table(TidyUCIHCAR,file="TidyUCIHCAR.txt",row.names=FALSE)
 
 
 
