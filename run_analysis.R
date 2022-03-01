@@ -6,7 +6,7 @@ library(tidyr)
 ## 0.2 Downloads, the data set and reads in the required txt files 
 
 URL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(URL,"", method = "libcurl", mode = "wb")
+download.file(URL,"./UCIHARData.zip", method = "libcurl", mode = "wb")
 
 zipF<-"./UCIHARData.zip" 
 outDir<-getwd()  
